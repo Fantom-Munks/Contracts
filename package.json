@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "test:deploy": "hardhat run --network testnet",
+    "deploy": "hardhat run --network mainnet"
   },
   "keywords": [],
   "author": "",

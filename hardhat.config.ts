@@ -22,13 +22,19 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
+console.log(`0x${process.env.WALLET_DEPLOY}`);
 const config: HardhatUserConfig = {
   solidity: "0.8.4",
   networks: {
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    testnet: {
+      chainId: 4002,
+      url: "https://rpc.testnet.fantom.network/",
+      accounts: [`0x${process.env.DEPLOY_WALLET}`],
+    },
+    mainnet: {
+      chainId: 250,
+      url: "https://rpc.ftm.tools/",
+      accounts: [`0x${process.env.DEPLOY_WALLET}`],
     },
   },
   gasReporter: {
