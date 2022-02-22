@@ -59,6 +59,16 @@ contract GoldenScarletSwords is ERC721A, IERC2981, AccessControl {
         super._burn(tokenId);
     }
 
+    function _baseURI()
+        internal
+        view
+        virtual
+        override(ERC721A)
+        returns (string memory)
+    {
+        return baseUri;
+    }
+
     // Returnes the URI of the token
     function tokenURI(uint256 tokenId)
         public
