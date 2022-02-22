@@ -1,46 +1,46 @@
-# Advanced Sample Hardhat Project
+# Fantom Munks Contracts
 
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
+This is the repository where all contracts from MUNKVERSE will live (everything here is thinking about Fantom Network).
 
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
+## About the contracts
 
-Try running some of the following tasks:
+FantomMunks.sol is the first collection of the MUNKVERSE, it have a total supply of 10000
+and the mint price 1 FTM. 
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.ts
-TS_NODE_FILES=true npx ts-node scripts/deploy.ts
-npx eslint '**/*.{js,ts}'
-npx eslint '**/*.{js,ts}' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
+GoldenScarlet/Swords.sol is the second one. We decided to make an airdrop 1:1 to the Munk Holders.
+The contract is kinda different from FantomMunks.sol, once the Swords will be only airdropped, we 
+use the [ERC721A](https://github.com/chiru-labs/ERC721A) as an alternative to @openzeppelin's ERC721 to decrease fees in batch mint.
+
+
+## Did you find an error?
+
+Please open an issue so we can work to improve these contracts.
+
+## How to run?
+
+Just clone the repository, install the dependencies and you are ready to go!
+```bash
+git clone git@github.com:LeonardsonCC/fantom-munks-contracts.git
+
+cd fantom-munks-contracts
+npm install
 ```
 
-# Etherscan verification
-
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
-
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
-
-```shell
-hardhat run --network ropsten scripts/sample-script.ts
+To run the tests:
+```bash
+npm test
 ```
 
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
+## Can I copy the code to use for my collection?
 
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
+Of course, you can! But we are not responsible if there are any errors or problems. Do it with that in mind.
 
-# Performance optimizations
+## Deployed Contracts
 
-For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable `TS_NODE_TRANSPILE_ONLY` to `1` in hardhat's environment. For more details see [the documentation](https://hardhat.org/guides/typescript.html#performance-optimizations).
+- **FantomMunks**: [0x7e72f05b8cd0860a83a6b27d3d80bd3b3e440c27](https://ftmscan.com/token/0x7e72f05b8cd0860a83a6b27d3d80bd3b3e440c27)
+- **Golden Scarlet**:
+  - **Swords**: Soon!
+
+
+## Thanks for reading this!
+If you have any other questions, feel free DM me on [twitter](https://twitter.com/leonardsoncc);
