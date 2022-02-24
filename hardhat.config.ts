@@ -28,6 +28,11 @@ const wallet = process.env.DEPLOY_WALLET
 const config: HardhatUserConfig = {
   solidity: "0.8.4",
   networks: {
+    hardhat: {
+      forking: {
+        url: "https://rpc.ftm.tools/",
+      },
+    },
     testnet: {
       chainId: 4002,
       url: "https://rpc.testnet.fantom.network/",
