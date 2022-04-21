@@ -39,7 +39,7 @@ Of course, you can! But we are not responsible if there are any errors or proble
 
 - **FantomMunks**: [0x7e72f05b8cd0860a83a6b27d3d80bd3b3e440c27](https://ftmscan.com/token/0x7e72f05b8cd0860a83a6b27d3d80bd3b3e440c27)
 - **Golden Scarlet**:
-  - **Swords**: Soon!
+  - **Swords**: [0x12acd3e7c1a58794bfad2b6cfdb766da6462687a](https://ftmscan.com/token/0x12acd3e7c1a58794bfad2b6cfdb766da6462687a)
 
 
 ## Thanks for reading this!
